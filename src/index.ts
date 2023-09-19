@@ -1,7 +1,7 @@
-import {apple_exos} from './apple_exos/apple_exos';
-import {car_exos} from './car_exos/car_exos';
-import {player_exos} from './player_exos/player_exos';
+import {apple_exos} from './apple_exos/exos';
+import {car_exos} from './car_exos/exos';
+import {basket_exos} from './basket_exos/exos';
 
 //apple_exos();
 //car_exos();
-player_exos();
+basket_exos();

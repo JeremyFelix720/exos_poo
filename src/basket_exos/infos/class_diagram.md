@@ -8,7 +8,14 @@ classDiagram
 
     class Team{
         -Player[] composition
+        +number points
         +number showNumberOfPlayers()
+    }
+
+    class Arbiter{
+        -Team team1
+        -Team team2
+        +decideWhatTeamWinTheMatch()
     }
 ```
 
