@@ -14,12 +14,17 @@ export class Weapon {
             if(vikingAttacker.health == vikingAttacker.maxHealth) {
                 console.log(vikingAttacker.name + " utilise la " + this.name + " pour récupérer des PV après avoir attaqué mais il a déjà ses PV au max."); 
             } else {
-                let stolen_life = Math.floor(vikingAttacker.real_strength * 0.13);
-                if(vikingAttacker.maxHealth - vikingAttacker.health < stolen_life) {
-                    stolen_life = vikingAttacker.maxHealth - vikingAttacker.health;
+
+                if(vikingDefender.defense < vikingAttacker.real_strength) {
+                    let stolen_life = Math.floor(vikingAttacker.real_strength * 0.13);
+                    if(vikingAttacker.maxHealth - vikingAttacker.health < stolen_life) {
+                        stolen_life = vikingAttacker.maxHealth - vikingAttacker.health;
+                    }
+                    vikingAttacker.health += stolen_life;
+                    console.log(vikingAttacker.name + " utilise la " + this.name + " pour récupérer " + stolen_life + " PV après avoir attaqué ; il a maintenant " + vikingAttacker.health + " PV.");
+                } else {
+                    console.log(vikingAttacker.name + " utilise la " + this.name + " pour récupérer des PV après avoir attaqué mais c'est un échec car il n'a fait aucun dégat à " + vikingDefender.name + ".");
                 }
-                vikingAttacker.health += stolen_life;
-                console.log(vikingAttacker.name + " utilise la " + this.name + " pour récupérer " + stolen_life + " PV après avoir attaqué ; il a maintenant " + vikingAttacker.health + " PV.");
             }
         } else if(vikingAttacker.weapon.name == "Epee de foudre") {
             if(vikingDefender.health <= 30) {

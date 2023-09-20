@@ -4,6 +4,7 @@ classDiagram
         +string name
         +number health
         +number strength
+        +number defense
         +Weapon[] weapon
         +number maxHealth
         -number initialCriticalHitPercentage

@@ -26,7 +26,7 @@ export class Battle {
             attacker.attack(defender, attacker.fightCriticalHitPercentage);
 
             if(defender.health <= 0) {
-                console.log("Le viking gagnant est " + attacker.name);
+                console.log(defender.name + " a été vaincu... Le viking gagnant est " + attacker.name + " !");
                 break; // met fin à la boucle while.
             }
 
