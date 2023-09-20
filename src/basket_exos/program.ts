@@ -8,7 +8,6 @@ import { Player } from "./player_class.js";
 import { Team } from "./team_class.js";
 import { Arbiter } from "./arbiter_class.js";
 
-
 export const basket_exos = () => {
 
     const J1 = new Player("Kevin", "DURANT", 34);

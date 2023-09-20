@@ -1,7 +1,6 @@
 import { Car } from "./car_class.js";
 import { Conductor } from "./conductor_class.js";
 
-
 export const car_exos = () => {
 
   const littleCar = new Car("Little car", "red", 22);

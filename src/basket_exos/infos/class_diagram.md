@@ -18,7 +18,7 @@ classDiagram
         -Team team2
         -Team team3
         -Team team4
-        -number decideWhatTeamWinTheMatch()
+        -number decideWhatTeamWinTheMatch(activeTeam1, activeTeam2)
         +decideWhatTeamWinTheTournament()
     }
 ```
