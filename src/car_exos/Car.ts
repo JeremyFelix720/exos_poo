@@ -24,5 +24,5 @@ export class Car {
 
     public set color(color:string) {
         this._color = color;
-      }
+    }
   }

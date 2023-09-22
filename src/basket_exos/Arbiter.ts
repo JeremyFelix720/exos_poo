@@ -1,4 +1,4 @@
-import { Team } from "./team_class";
+import { Team } from "./Team";
 
 export class Arbiter {
 

@@ -4,9 +4,9 @@
 2 - Créer un tournoi avec 4 équipes (l'équipe gagnante est la première à arriver à 20 points)
 */
 
-import { Player } from "./player_class.js";
-import { Team } from "./team_class.js";
-import { Arbiter } from "./arbiter_class.js";
+import { Player } from "./Player.js";
+import { Team } from "./Team.js";
+import { Arbiter } from "./Arbiter.js";
 
 export const basket_exos = () => {
 

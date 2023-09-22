@@ -1,4 +1,4 @@
-import { Player } from "./player_class";
+import { Player } from "./Player";
 
 export class Team {
 

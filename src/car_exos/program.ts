@@ -1,5 +1,5 @@
-import { Car } from "./car_class.js";
-import { Conductor } from "./conductor_class.js";
+import { Car } from "./Car.js";
+import { Conductor } from "./Conductor.js";
 
 export const car_exos = () => {
 

@@ -1,4 +1,4 @@
-import { Car } from "./car_class";
+import { Car } from "./Car";
 
 export class Conductor {
     private firstname: string

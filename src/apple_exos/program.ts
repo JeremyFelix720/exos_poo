@@ -1,4 +1,4 @@
-import { Apple } from "./apple_class.js";
+import { Apple } from "./Apple.js";
 
 export const apple_exos = () => {
 
