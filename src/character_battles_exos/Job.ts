@@ -14,8 +14,9 @@ export abstract class Job {
     private _intelligenceBonus: number
     private _manaBonus: number
     private _initialCriticalHitPercentageBonus: number
+    private _specialAbilityMoment: string;
 
-    constructor(jobName: string, healthBonus:number, strengthBonus:number, defenseBonus: number, speedBonus: number, intelligenceBonus: number, manaBonus:number, initialCriticalHitPercentageBonus:number) {
+    constructor(jobName: string, healthBonus:number, strengthBonus:number, defenseBonus: number, speedBonus: number, intelligenceBonus: number, manaBonus:number, initialCriticalHitPercentageBonus:number, specialAbilityMoment: string) {
         this._jobName = jobName,
         this._healthBonus = healthBonus,
         this._strengthBonus = speedBonus,
@@ -23,11 +24,12 @@ export abstract class Job {
         this._speedBonus = speedBonus,
         this._intelligenceBonus = intelligenceBonus,
         this._manaBonus = manaBonus,
-        this._initialCriticalHitPercentageBonus = initialCriticalHitPercentageBonus
+        this._initialCriticalHitPercentageBonus = initialCriticalHitPercentageBonus,
+        this._specialAbilityMoment = specialAbilityMoment
     }
 
     public useSpecialAbility(attacker: Character, defender: Character) :any{
-        //
+        // Laisser vide. Cette méthode est appelée dans la classe BattleHandler pour déclencher la capacité spé de l'un des types de personnages (sans savoir lequel à l'avance).
     }
 
 
@@ -99,4 +101,12 @@ export abstract class Job {
     public set initialCriticalHitPercentageBonus(value: number) {
         this._initialCriticalHitPercentageBonus = value
     }
+
+    public get specialAbilityMoment(): string {
+        return this._specialAbilityMoment;
+    }
+    public set specialAbilityMoment(value: string) {
+        this._specialAbilityMoment = value;
+    }
+
 }

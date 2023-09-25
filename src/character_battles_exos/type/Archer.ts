@@ -15,19 +15,17 @@ export class Archer extends Job {
     speedBonus: number = 3,
     intelligenceBonus: number = 1,
     manaBonus: number = 10,
-    initialCriticalHitPercentageBonus: number = 5
+    initialCriticalHitPercentageBonus: number = 5,
+    specialAbilityMoment: string = "before attack"
+
     ) {
-        super(jobName, healthBonus, strengthBonus, defenseBonus, speedBonus, intelligenceBonus, manaBonus, initialCriticalHitPercentageBonus)
+        super(jobName, healthBonus, strengthBonus, defenseBonus, speedBonus, intelligenceBonus, manaBonus, initialCriticalHitPercentageBonus, specialAbilityMoment)
     }
 
     // La capacité spéciale des archers et des archères est la pose de piège. Au début du combat, si le personnage est plus rapide que son adversaire alors le personnage peut poser un piège qui s'active à la première attaque de l'adversaire et inflige 250% des dégats d'une attaque normale.
     useSpecialAbility(attacker: Character, defender: Character) {
-        /*
         if(attacker.speed > defender.speed) {
-
+            defender.hasTrap = true;
         }
-        */
-
-        //let characterRank: Character[] = [attacker, defender].sort((element1, element2) => {})
     }
 }

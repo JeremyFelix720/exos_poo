@@ -15,13 +15,15 @@ export class Thief extends Job {
     speedBonus: number = 5,
     intelligenceBonus: number = 1,
     manaBonus: number = 10,
-    initialCriticalHitPercentageBonus: number = 13
+    initialCriticalHitPercentageBonus: number = 13,
+    specialAbilityMoment: string = "during attack"
+
     ) {
-        super(jobName, healthBonus, strengthBonus, defenseBonus, speedBonus, intelligenceBonus, manaBonus, initialCriticalHitPercentageBonus)
+        super(jobName, healthBonus, strengthBonus, defenseBonus, speedBonus, intelligenceBonus, manaBonus, initialCriticalHitPercentageBonus, specialAbilityMoment)
     }
 
     // La capacité spéciale des voleurs et des voleuses est l'attaque surprise : lors d'un coup critique, les dégats infligés sont de 250% de la force du personnage. En plus, ces personnages peuvent réattaquer lors d'un coup critique.
     useSpecialAbility(attacker: Character, defender: Character) {
-
+        
     }
 }

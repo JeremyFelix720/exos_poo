@@ -15,9 +15,10 @@ export class Wizard extends Job {
     speedBonus: number = 1,
     intelligenceBonus: number = 5,
     manaBonus: number = 45,
-    initialCriticalHitPercentageBonus: number = 0
+    initialCriticalHitPercentageBonus: number = 0,
+    specialAbilityMoment: string = "before attack"
     ) {
-        super(jobName, healthBonus, strengthBonus, defenseBonus, speedBonus, intelligenceBonus, manaBonus, initialCriticalHitPercentageBonus)
+        super(jobName, healthBonus, strengthBonus, defenseBonus, speedBonus, intelligenceBonus, manaBonus, initialCriticalHitPercentageBonus, specialAbilityMoment)
     }
 
     // La capacité spéciale des magiciens et des magiciennes est l'incantation et la récupération automatique de points de mana tous les tours. À tous les tours les personnages de type magicien récupère la moitié de leurs intelligence en points de mana. Les sorts se lancent automatiquement dans certaines conditions. Les magiciens et les magiciennes connaissent 1 sort à la création du personnage.

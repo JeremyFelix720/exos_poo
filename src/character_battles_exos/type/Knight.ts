@@ -15,13 +15,21 @@ export class Knight extends Job {
     speedBonus: number = 1,
     intelligenceBonus: number = 1,
     manaBonus: number = 5,
-    initialCriticalHitPercentageBonus: number = 3
+    initialCriticalHitPercentageBonus: number = 3,
+    specialAbilityMoment: string = "on hit"
+
     ) {
-        super(jobName, healthBonus, strengthBonus, defenseBonus, speedBonus, intelligenceBonus, manaBonus, initialCriticalHitPercentageBonus)
+        super(jobName, healthBonus, strengthBonus, defenseBonus, speedBonus, intelligenceBonus, manaBonus, initialCriticalHitPercentageBonus, specialAbilityMoment)
     }
 
     // La capacité spéciale des chevaliers est l'utilisation de leur bouclier, ce sont d'ailleurs les seuls à pouvoir en utiliser un. Dès que le personnage recoit des dégats, il réduit les dégats subits de 25%, quelque soient les dégats reçus.
     public useSpecialAbility(attacker: Character, defender: Character) {
+        let domageReducedRatio = 0.75;
+        let domage = attacker.strength;
+        let domageReduced = domage * domageReducedRatio;
 
+        defender.domageReducedRatio = domageReducedRatio;
+
+        console.log(defender.name + " utilise son bouclier pour réduire la prochaine attaque de 25%.");
     }
 }

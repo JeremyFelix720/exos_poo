@@ -14,13 +14,14 @@ export class Viking extends Job {
     speedBonus: number = 2,
     intelligenceBonus: number = 0,
     manaBonus: number = 0,
-    initialCriticalHitPercentageBonus: number = 8
+    initialCriticalHitPercentageBonus: number = 8,
+    specialAbilityMoment: string = "during attack"
     ) {
-        super(jobName, healthBonus, strengthBonus, speedBonus, defenseBonus, intelligenceBonus, manaBonus, initialCriticalHitPercentageBonus)
+        super(jobName, healthBonus, strengthBonus, speedBonus, defenseBonus, intelligenceBonus, manaBonus, initialCriticalHitPercentageBonus, specialAbilityMoment)
     }
 
     // La capacité spéciale des nouveaux vikings est le vol de vie. Chacune de leurs attaques permet de récupérer 15% des dégats infligés en points de santé et 3% en points de mana.
-        useSpecialAbility(attacker: Character, defender: Character) {
+        useSpecialAbility(attacker: Character, defender: Character) { // Méthode surchargée.
 
         let damage;
 
@@ -34,31 +35,12 @@ export class Viking extends Job {
                 if(attacker.maxHealth - attacker.health < bonusHealth) {
                     bonusHealth = attacker.maxHealth - attacker.health;
                 }
-                attacker._health += bonusHealth;
+                attacker.health += bonusHealth;
                 attacker.mana += bonusMana;
                 console.log(attacker.name + " utilise sa capacité spéciale pour récupérer " + bonusHealth + " PV et " + bonusMana + " PM après avoir attaqué ; il a maintenant " + attacker.health + " PV et " + attacker.mana + " PM.");
             } else {
                 console.log(attacker.name + " utilise sa capacité spéciale pour récupérer des PV et des PM après avoir attaqué mais c'est un échec car il n'a fait aucun dégat à " + defender.name + ".");
             }
-        }
-    }
-
-    public attack(attacker: Character, defender: Character) {
-        let fightStrength = attacker.strength; /*this.real_strength;*/
-        let criticalHitLuck = Math.floor(Math.random()*101) // génére un nombre entre 0 et 100.
-        if(criticalHitLuck < attacker.fightCriticalHitPercentage) {
-            fightStrength *=2;
-            console.log(attacker.name + " va faire un coup critique !");
-        }
-        if(defender.defense < attacker.strength /*this.real_strength*/) {
-            defender._health -= fightStrength - defender.defense;
-            attacker.fightCriticalHitPercentage = attacker.initialCriticalHitPercentage; // réinitialisation du taux de coup critique après l'attaque.
-            if(defender.health < 0) {
-                defender._health = 0;
-            }
-            console.log(attacker.name + " a attaqué " + defender.name + " et lui a enlevé " + fightStrength + " PV ; il lui reste " + defender.health + " PV.");
-        } else {
-            console.log(attacker.name + " a attaqué " + defender.name + " mais il n'a perdu aucun PV car sa defense est supérieure l'attaque de " + attacker.name + ".");
         }
     }
 }
