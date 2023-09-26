@@ -1,5 +1,5 @@
-import { Job } from "../Job.js";
-import { Character } from "../Character.js";
+import { Job } from "../../Job.js";
+import { Character } from "../../Character.js";
 
 
 export class Thief extends Job {
@@ -25,5 +25,6 @@ export class Thief extends Job {
     // La capacité spéciale des voleurs et des voleuses est l'attaque surprise : lors d'un coup critique, les dégats infligés sont de 250% de la force du personnage. En plus, ces personnages peuvent réattaquer lors d'un coup critique.
     useSpecialAbility(attacker: Character, defender: Character) {
         
+        console.log(attacker.name + " se prépare à utiliser sa capacité spéciale en cas de coup critique...");
     }
 }

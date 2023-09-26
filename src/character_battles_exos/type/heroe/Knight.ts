@@ -1,5 +1,5 @@
-import { Job } from "../Job.js";
-import { Character } from "../Character.js";
+import { Job } from "../../Job.js";
+import { Character } from "../../Character.js";
 
 
 export class Knight extends Job {
@@ -30,6 +30,6 @@ export class Knight extends Job {
 
         defender.domageReducedRatio = domageReducedRatio;
 
-        console.log(defender.name + " utilise son bouclier pour réduire la prochaine attaque de 25%.");
+        console.log(defender.name + " utilise sa capacité spéciale en se servant de son bouclier pour réduire de 25% les dommages de la prochaine attaque de " + attacker.name + ".");
     }
 }

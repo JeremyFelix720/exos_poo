@@ -1,6 +1,6 @@
-import { BattleHandler } from "../BattleHandler.js";
-import { Character } from "../Character.js";
-import { Job } from "../Job.js";
+import { BattleHandler } from "../../BattleHandler.js";
+import { Character } from "../../Character.js";
+import { Job } from "../../Job.js";
 
 export class Archer extends Job {
 
@@ -24,8 +24,9 @@ export class Archer extends Job {
 
     // La capacité spéciale des archers et des archères est la pose de piège. Au début du combat, si le personnage est plus rapide que son adversaire alors le personnage peut poser un piège qui s'active à la première attaque de l'adversaire et inflige 250% des dégats d'une attaque normale.
     useSpecialAbility(attacker: Character, defender: Character) {
-        if(attacker.speed > defender.speed) {
-            defender.hasTrap = true;
-        }
+        //if(attacker.speed > defender.speed) {
+        defender.hasTrap = true;
+        console.log(attacker.name + " est plus rapide que " + defender.name + " et en profite pour utiliser sa capacité spéciale en posant un piège qui s'activera à la prochaine attaque de l'adversaire qui lui infligera 250% des dégats d'une attaque normale.")
+        //}
     }
 }

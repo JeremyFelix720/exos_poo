@@ -1,12 +1,7 @@
-import { Viking } from "./type/Viking.js";
-import { Archer } from "./type/Archer.js";
-import { Knight } from "./type/Knight.js";
-import { Wizard } from "./type/Wizard.js";
-import { Thief } from "./type/Thief.js";
 import { Character } from "./Character.js";
 
 export abstract class Job {
-    private _jobName: string
+    private _jobName: string = "Viking" || "Archer" || "Chevalier" || "Thief" || "Wizar"
     private _healthBonus: number
     private _strengthBonus: number
     private _defenseBonus: number

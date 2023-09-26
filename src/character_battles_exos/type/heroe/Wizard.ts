@@ -1,5 +1,5 @@
-import { Job } from "../Job.js";
-import { Character } from "../Character.js";
+import { Job } from "../../Job.js";
+import { Character } from "../../Character.js";
 
 
 export class Wizard extends Job {

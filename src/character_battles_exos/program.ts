@@ -1,11 +1,11 @@
 import { BattleHandler } from "./BattleHandler.js";
 // import { Team } from "./Team.js",
 import { Character } from "./Character.js";
-import { Viking } from "./type/Viking.js";
-import { Archer } from "./type/Archer.js";
-import { Knight } from "./type/Knight.js";
-import { Wizard } from "./type/Wizard.js";
-import { Thief } from "./type/Thief.js";
+import { Viking } from "./type/heroe/Viking.js";
+import { Archer } from "./type/heroe/Archer.js";
+import { Knight } from "./type/heroe/Knight.js";
+import { Wizard } from "./type/heroe/Wizard.js";
+import { Thief } from "./type/heroe/Thief.js";
 // import { Weapon } from "./Weapon.js";
 
 export const character_battles_exos = () => {

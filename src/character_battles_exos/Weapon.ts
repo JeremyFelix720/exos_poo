@@ -1,4 +1,4 @@
-import { Viking } from "./type/Viking";
+import { Viking } from "./type/heroe/Viking";
 
 export class Weapon {
     private name: string
