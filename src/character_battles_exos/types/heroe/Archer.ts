@@ -26,7 +26,7 @@ export class Archer extends Job {
     useSpecialAbility(attacker: Character, defender: Character) {
         //if(attacker.speed > defender.speed) {
         defender.hasTrap = true;
-        console.log(attacker.name + " est plus rapide que " + defender.name + " et en profite pour utiliser sa capacité spéciale en posant un piège qui s'activera à la prochaine attaque de l'adversaire qui lui infligera 250% des dégats d'une attaque normale.")
+        console.log(attacker.name + " est plus rapide que " + defender.name + " et en profite pour utiliser sa capacité spéciale en posant un piège qui s'activera à la prochaine attaque de l'adversaire, ce qui lui infligera 250% des dégats d'une attaque normale.")
         //}
     }
 }

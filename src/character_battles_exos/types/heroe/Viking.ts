@@ -26,7 +26,7 @@ export class Viking extends Job {
         let damage;
 
         if(attacker.health == attacker.maxHealth) {
-            console.log(attacker.name + " utilise la " + attacker.name + " pour récupérer des PV et des PM après avoir attaqué mais il a déjà ses PV au max."); 
+            console.log(attacker.name + " utilise sa capacité spéciale en se servant de la lame de sang pour récupérer des PV et des PM après avoir attaqué mais il a déjà ses PV au max."); 
         } else {
             if(defender.defense < attacker.strength) {
                 damage = attacker.strength - defender.defense ;
@@ -34,6 +34,9 @@ export class Viking extends Job {
                 let bonusMana = Math.floor(damage * 0.03);
                 if(attacker.maxHealth - attacker.health < bonusHealth) {
                     bonusHealth = attacker.maxHealth - attacker.health;
+                }
+                if(attacker.maxMana - attacker.mana < bonusMana) {
+                    bonusMana = attacker.maxMana - attacker.mana;
                 }
                 attacker.health += bonusHealth;
                 attacker.mana += bonusMana;
